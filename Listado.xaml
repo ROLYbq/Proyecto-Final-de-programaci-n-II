@@ -1,0 +1,99 @@
+﻿<Window x:Class="EmapaProyect.Listado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmapaProyect"
+        mc:Ignorable="d"
+        Title="Listado" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="15">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" 
+                        Margin="0 0 0 15">
+                <Label Content="Producto:" 
+                       VerticalAlignment="Center" 
+                       FontSize="16"/>
+                <ComboBox x:Name="cbProductos" 
+                          Width="220" 
+                          Height="30"
+                          Margin="15,0,0,1"
+                          FontSize="15" 
+                          SelectionChanged="cbProductos_SelectionChanged"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" 
+                        Grid.Row="1" 
+                        Margin="0 0 0 15">
+                <Label Content="Cantidad:"
+                       VerticalAlignment="Center"
+                       FontSize="16"/>
+                <TextBox x:Name="txtCantidad"
+                         Width="100"
+                         Height="30"
+                         Margin="15 0 0 0"
+                         FontSize="15"/>
+                <Button Content="Agregar mas Productos" 
+                        Width="200"
+                        Height="35" 
+                    FontSize="15"
+                        Click="Agregar_Click"/>
+                <Button Content="Quitar"
+                        Width="120" 
+                        Height="35"
+                        Margin="15 0 0 0"
+                    FontSize="15"
+                        Click="Quitar_Click"/>
+            </StackPanel>
+
+            <ListView x:Name="lvLista"
+                      Grid.Row="2" 
+                      Height="300" 
+                      Margin="0 0 0 10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Producto"
+                                        Width="200" 
+                                        DisplayMemberBinding="{Binding Nombre}"/>
+                        <GridViewColumn Header="Cantidad" 
+                                        
+                                        Width="100" 
+                                        DisplayMemberBinding="{Binding Cantidad}"/>
+                        <GridViewColumn Header="Precio (Bs)" 
+                                        Width="100" 
+                                        DisplayMemberBinding="{Binding Precio}"/>
+                        <GridViewColumn Header="Subtotal (Bs)" 
+                                        Width="120"
+                                        DisplayMemberBinding="{Binding Subtotal}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <StackPanel Grid.Row="3" 
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Right">
+                <Label Content="TOTAL: "
+                       FontSize="20" VerticalAlignment="Center"/>
+                <Label x:Name="lblTotal" 
+                       Content="0 Bs" FontSize="24" 
+                       FontWeight="Bold" VerticalAlignment="Center"/>
+
+                <Button Content="Finalizar" 
+                        Width="150"
+                        Height="40"
+                        Margin="20 0 0 0" 
+                    FontSize="16"
+                        Click="Finalizar_Click"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</Window>

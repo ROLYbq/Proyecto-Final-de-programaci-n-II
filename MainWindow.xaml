@@ -1,0 +1,91 @@
+﻿<Window x:Class="EmapaProyect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmapaProyect"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Margin="10">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/Gemini_Generated_Image_1os2q1os2q1os2q1.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Titulo"
+               Grid.ColumnSpan="2"
+               Foreground="Wheat"
+               Content="LOGIN"
+               FontSize="50"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+
+
+
+        <Label x:Name="lblEmail"
+                 Grid.Row="1"
+                 Content="E-mail:"
+               Foreground="GreenYellow"
+             />
+        <TextBox x:Name="txtEmail"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 PreviewTextInput="txtEmail_PreviewTextInput"
+                  Margin="15"      
+             />
+
+
+        <Label x:Name="lblPassword"
+                Grid.Row="2"
+                Content="Contraseña:"
+               Foreground="GreenYellow"
+                  
+            />
+        <PasswordBox x:Name="pwdContra"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="20"
+                FontWeight="Bold"
+                Margin="15"
+            />
+
+        <Button x:Name="btnLimpiar"
+                Grid.Row="4" 
+                Content="Limpiar"
+                Click="btnLimpiar_Click"
+                 Margin="10"/>
+
+        <Button x:Name="btnAceptar"
+                Grid.Row="4"
+                Grid.Column="1"
+                Content="Aceptar"
+                Click="btnAceptar_Click" Margin="8,10,12,10"/>
+
+        <Button x:Name="btnRegistro"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Content="Registrarse" Click="btnRegistro_Click"
+                Margin="12"
+            />
+
+        <Label x:Name="lblMensajes"
+               Grid.Row="2"
+               FontSize="10" Margin="55" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+
+
+    </Grid>
+
+</Window>

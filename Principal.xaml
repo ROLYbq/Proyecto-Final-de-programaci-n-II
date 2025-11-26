@@ -1,0 +1,132 @@
+﻿<Window x:Class="EmapaProyect.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmapaProyect"
+        mc:Ignorable="d"
+        Title="Principal" Height="450" Width="800">
+
+    <Grid>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition Height="30"/>
+
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/celeste.jpg"/>
+        </Grid.Background>
+
+
+        <Rectangle Height="60" Grid.Row="0" Margin="71,0,59,30" Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/img/Gemini_Generated_Image_vic95svic95svic9-removebg-preview.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.Row="1"
+                    Margin="0,60,-8,0" Grid.ColumnSpan="2">
+            <Button Content="Institucional" 
+                    Height="28" Width="120"
+                    Background="Transparent"
+                    BorderBrush="Transparent" 
+                    Foreground="Black" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="5"/>
+            <Button Content="Comunicación" 
+                    Height="28" Width="120" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    Foreground="Black" 
+                    FontWeight="Bold"
+                    Cursor="Hand"
+                    Margin="5"/>
+            <Button Content="Normativa"
+                    Height="28" 
+                    Width="120" 
+                    Background="Transparent" 
+                    BorderBrush="Transparent" 
+                    Foreground="Black" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="5"/>
+            <Button Content="Recursos Humanos" 
+                    Height="28" 
+                    Width="150" 
+                    Background="Transparent" 
+                    BorderBrush="Transparent" 
+                    Foreground="Black" 
+                    FontWeight="Bold" 
+                    Cursor="Hand"
+                    Margin="5"/>
+            <Button Content="Contrataciones" 
+                    Height="28" 
+                    Width="130" 
+                    Background="Transparent"
+                    BorderBrush="Transparent" 
+                    Foreground="Black"
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="5"/>
+            <Button Content="Contacto"
+                    Height="28" 
+                    Width="100" 
+                    Background="Transparent"
+                    BorderBrush="Transparent" 
+                    Foreground="Black" 
+                    FontWeight="Bold" 
+                    Cursor="Hand" 
+                    Margin="5"/>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Row="2"
+                    Margin="0,20,372,0" Grid.ColumnSpan="2">
+            <Button x:Name="btnProductos"
+                    Content="Productos"
+                    Height="28" Width="120" 
+                    Background="Transparent" 
+                    BorderBrush="Gray" 
+                    Foreground="Black"
+                    Margin="10"/>
+            <Button x:Name="btnNormativas"
+                    Content="Normativas" 
+                    Height="28" 
+                    Width="120" 
+                    Background="Transparent" 
+                    BorderBrush="Gray" 
+                    Foreground="Black"
+                    Margin="10"/>
+            <Button x:Name="btnSucursales" 
+                    Content="Sucursales"
+                    Height="28" Width="120" 
+                    Background="Transparent" 
+                    BorderBrush="Gray" 
+                    Foreground="Black" 
+                    Margin="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

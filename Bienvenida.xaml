@@ -1,0 +1,35 @@
+﻿<Window x:Class="EmapaProyect.Bienvenida"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmapaProyect"
+        mc:Ignorable="d"
+        Title="Bienvenida" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/Gemini_Generated_Image_1os2q1os2q1os2q1.png"/>
+        </Grid.Background>
+        <Label x:Name="Titulo"
+
+             Content=" Te damos la bien venida! "
+             Foreground="White"
+             FontSize="30"
+             
+             Width="408"
+             Height="50" 
+             Margin="122,95,112,274" 
+               />
+        <TextBox 
+             Margin="143,150,169,229"
+            Opacity="0.4"
+            Height="40"
+            Foreground="Black"
+            Width="480" FontSize="30">
+            Gracias  por registrarte en EMPAPA
+
+        </TextBox>
+
+
+    </Grid>
+</Window>
